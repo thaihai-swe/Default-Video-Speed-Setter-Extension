@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            margin: 0;
+            padding: 20px;
+            width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        h3 {
+            margin-top: 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            background: #f59e0b;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background: #d97706;
+            transform: scale(1.02);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .status {
+            margin-top: 10px;
+            font-size: 0.8rem;
+            height: 12px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h3>Set Default Speed</h3>
+        <input type="number" id="speed" step="0.25" min="0.25" max="5">
+        <button id="save">SAVE SETTINGS</button>
+        <div id="status" class="status"></div>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
